@@ -10,13 +10,16 @@ root.minsize(height=500,width=750)
 
 def window_1():
     label1=Label(root, text="Welcome to...", font=("Century Gothic", 35))
-    label1.pack()
+    label1.place(relx= 0.0, 
+                 rely = 0.0,    
+                 anchor = 'nw')
     button1=Button(root,text='Proceed',font=('Catamaran',15))
     button1.pack(side='bottom')
     welcome=PhotoImage(file = 'C:\\Users\\super\\Downloads\\welcomeparty.png')
     label = ttk.Label(root, image = welcome)
     PhotoImage(file = 'C:\\Users\\super\\Downloads\\welcomeparty.png')
     label = Label(root, image=welcome, bd=5, relief="sunken")
+    label.place(rel)
     label.pack(padx=20, pady=20)
     print(label)
     def window_2():#page 2
@@ -29,6 +32,5 @@ def window_1():
         def back():
             label2.destroy()
             button2.destroy()
-
 window_1()
 root.mainloop()
