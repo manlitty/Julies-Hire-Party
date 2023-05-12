@@ -15,8 +15,11 @@ def window_1():
         label1.destroy()
         button1.destroy()
         label2= Label(root,text='Night', font=('Century Gothic',15))
-        button2 = Button(root, text='Exit', font=('Century Gothic',15))
+        button2 = Button(root, text='Exit', font=('Century Gothic',15),command=back)
         label2.pack()
         button2.pack(side='right')
+        def back():
+            label2.destroy()
+            button2.destroy()
 window_1()
 root.mainloop()
