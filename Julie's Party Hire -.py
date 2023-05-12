@@ -21,7 +21,7 @@ def window_1():
     PhotoImage(file = 'C:\\Users\\super\\Downloads\\welcomeparty.png')
     label = Label(root, image=welcome, bd=5, relief="sunken")
     label.place()
-    label.pack(padx=20, pady=20)
+    label.pack(padx=20, pady=75 )
     print(label)
     def window_2():#page 2
         label1.destroy()
