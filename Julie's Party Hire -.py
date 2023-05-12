@@ -7,8 +7,9 @@ from tkinter import ttk
 root=Tk()
 root.title("Julie's Hire Party")
 root.iconbitmap('C:\\Users\\super\\Downloads\\hireparty.ico')
-root.minsize(height=500,width=750)
+root.minsize(height=450,width=500)
 
+# Window 1 - Opening Window
 def window_1():
     label1=Label(root, text="Welcome to...", font=("Century Gothic", 35))
     label1.place(relx= 0.0, 
@@ -16,13 +17,16 @@ def window_1():
                  anchor = 'nw')
     button1=Button(root,text='Proceed',font=('Catamaran',15))
     button1.pack(side='bottom')
-    welcome=PhotoImage(file = 'C:\\Users\\super\\Downloads\\welcomeparty.png')
-    label = ttk.Label(root, image = welcome)
-    PhotoImage(file = 'C:\\Users\\super\\Downloads\\welcomeparty.png')
-    label = Label(root, image=welcome, bd=5, relief="sunken")
-    label.place()
+    #Images - 21-25
+    julies_party_rentals_png = tk.PhotoImage(file = 'C:\\Users\\super\\Downloads\\JULIES_HIRE_PARTY\\PROGRAM\\julies_party_rentals.png')
+   
+    label = Label(root, image = julies_party_rentals_png)
+    
+    label = Label(root, image=julies_party_rentals_png, bd=3, relief="sunken")
+    
     label.pack(padx=20, pady=75 )
-    print(label)
+    
+    
     def window_2():#page 2
         label1.destroy()
         button1.destroy()
