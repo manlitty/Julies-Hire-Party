@@ -19,7 +19,7 @@ def window_1():
     label = ttk.Label(root, image = welcome)
     PhotoImage(file = 'C:\\Users\\super\\Downloads\\welcomeparty.png')
     label = Label(root, image=welcome, bd=5, relief="sunken")
-    label.place(rel)
+    label.place()
     label.pack(padx=20, pady=20)
     print(label)
     def window_2():#page 2
