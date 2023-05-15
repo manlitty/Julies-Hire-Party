@@ -11,14 +11,18 @@ style2 = font.Font(size=20)
 style3 = font.Font(size=15)
 
 
+#Windows
 page1 = Frame(win)
 page2 = Frame(win)
 page3 = Frame(win)
 
+#Page Grid
 page1.grid(row=0, column=0, sticky="nsew")
 page2.grid(row=0, column=0, sticky="nsew")
 page3.grid(row=0, column=0, sticky="nsew")
 
+
+#Text Titles
 lb1 = Label (page1, text="I am page 1", font=style1)
 lb1.pack(pady=20)
 
@@ -28,7 +32,7 @@ lb2.pack(pady=30)
 lb3 = Label (page3, text="I am page 3", font=style1)
 lb3.pack(pady=50)
 
-
+#Buttons to switch pages/tabs, tkraise is the function to switch frames seamlessly 
 btn1 = Button(page1, text="Show Page 2", command=lambda: page2.tkraise(), font=style2)
 btn1.pack()
 
