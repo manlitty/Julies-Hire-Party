@@ -1,4 +1,4 @@
-# Julie's Party Hire
+#Julie's Party Hire
 
 from tkinter import *
 import tkinter as tk
@@ -15,14 +15,14 @@ def window_1():
     label1.place(relx= 0.0, 
                  rely = 0.0,    
                  anchor = 'nw')
-    button1=Button(root,text='Proceed',font=('Catamaran',15))
+    button1=Button(root,text='Proceed',font=('Catamaran',15), command=window_2)
     button1.pack(side='bottom')
     #Images - 21-25
-    julies_party_rentals_png = tk.PhotoImage(file = 'C:\\Users\\super\\Downloads\\JULIES_HIRE_PARTY\\PROGRAM\\julies_party_rentals.png')
+    party_Rentals = tk.PhotoImage(file = 'C:\\Users\\super\\Downloads\\JULIES_HIRE_PARTY\\PROGRAM\\julies_party_rentals.png')
    
-    label = Label(root, image = julies_party_rentals_png)
+    label = Label(root, image = party_Rentals)
     
-    label = Label(root, image=julies_party_rentals_png, bd=3, relief="sunken")
+    label = Label(root, image= party_Rentals, bd=3, relief="sunken")
     
     label.pack(padx=20, pady=75 )
     
