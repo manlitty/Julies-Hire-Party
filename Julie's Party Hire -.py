@@ -1,8 +1,7 @@
 #Julie's Party Hire
 
 from tkinter import *
-import tkinter as tk
-from tkinter import ttk
+from PIL import Image, ImageTk #still comes out yellow
 
 root=Tk()
 root.title("Julie's Hire Party")
@@ -18,7 +17,7 @@ def window_1():
     button1.pack(side=BOTTOM)
     
     #Images - 21-25
-    party_Rentals = tk.PhotoImage(file = 'C:\\Users\\super\\Downloads\\JULIES_HIRE_PARTY\\PROGRAM\\julies_party_rentals.png')
+    party_Rentals = ImageTk.PhotoImage(Image.open("julies_party_rentals.png"))
    
     label2 = Label(root, image = party_Rentals)
     
