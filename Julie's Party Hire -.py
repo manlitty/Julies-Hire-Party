@@ -7,7 +7,7 @@ from PIL import Image, ImageTk
 root = Tk()
 root.title("Julie's Hire Party")
 root.iconbitmap('C:\\Users\\super\\Downloads\\hireparty.ico')
-root.minsize(height=450, width=650)
+root.minsize(height=450, width=440)
 
 image_references = []
 count = 0
@@ -83,8 +83,8 @@ def window_1():
             
     
         #Remove all
-            remove_all = Button(root, text="Delete", command=remove_all)
-            remove_all.grid(row=10, column=0, pady=20 )
+        remove_all = Button(root, text="Remove all", command=remove_all)
+        remove_all.grid(row=8, column=1, pady = 20 )
         # Using Treeview Widget
         my_tree = ttk.Treeview(root)
         my_tree['columns'] = ("Row_#", "Your_Name", "Reciept_Number", "Item_Number_Hired", "Item_Hired")
@@ -127,7 +127,7 @@ def window_1():
 
     # Framing for Image - Window 1
     frame = Frame(root, highlightbackground='black', highlightthickness=2)
-    frame.grid(row=3, column=0, pady=50)
+    frame.grid(row=2, column=0, pady=10)
     imagelabel2 = Label(frame, image=photo)
     imagelabel2.pack()
 
