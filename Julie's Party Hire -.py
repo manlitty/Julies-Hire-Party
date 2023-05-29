@@ -83,7 +83,7 @@ def window_1():
                 my_tree.delete(changes)
             
     
-        #Remove all
+        #Remove allbutton
         
         remove_all = Button(root, text="Remove all", command=remove_all)
         remove_all.grid(row=8, column=2 )
@@ -114,9 +114,16 @@ def window_1():
                  my_tree.delete(selected_item)
                  
         
-        # Bind double-click event to treeview
+        # Bind double-click event to remove a treeview row
         my_tree.bind("<Double-1>", delete_row)   
         
+        #LOGO IMAGE TOP RIGHT
+        img4 = Image.open("C:\\Users\\super\\Downloads\\JULIES_HIRE_PARTY\\PROGRAM\\imagesss.png")
+        img4 = img4.resize((300, 250), Image.ANTIALIAS)
+        photo2 = ImageTk.PhotoImage(img4)
+        imagelabel2 = Label(root, image=photo2)
+        image_references.append(photo2)
+        imagelabel2.place(x=380, y=0)  # Position the photo in the top-right corner
         
 
         # Destroy Program Function
