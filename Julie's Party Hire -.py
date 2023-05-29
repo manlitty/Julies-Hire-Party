@@ -6,19 +6,18 @@ import re
 
 
 root = Tk()
-root.title("Julie's Hire Party")
-root.iconbitmap('C:\\Users\\super\\Downloads\\hireparty.ico')
-root.minsize(height=450, width=440)
+root.title("Julie's Hire Party") # Title
+root.iconbitmap('C:\\Users\\super\\Downloads\\hireparty.ico') # Icon top left of the program
+root.minsize(height=450, width=440) # Size of Program
 
-image_references = []
-count = 0
+image_references = [] # frame and images
+count = 0 # used to add rows
 
 # Window 1 - Opening Window
 
 def window_1():
-    # Window 2
 
-    def window_2():
+    def window_2(): # Window 2
         label1.destroy()  # destroys Label1
         button1.destroy()  # destroy button from window 1
         imagelabel.destroy()  # destroy image label from window 1
@@ -44,8 +43,7 @@ def window_1():
         #Restricts user to type numbers from Entry 1-3
         def validate_input(text):
             return not any(char.isdigit() or char == '.' for char in text)
-
-
+        
         # Entry Widgets + Buttons
         L1 = Label(text="What's Your Name?:", font=40)
         L1.grid(row=0, column=0, sticky="w")
@@ -103,13 +101,13 @@ def window_1():
         save.grid(row=8, column=0, pady=20)
         
 
-        #Def remove
+        # Remove all function
         def remove_all():
             for changes in my_tree.get_children():
                 my_tree.delete(changes)
             
     
-        #Remove allbutton
+        #Remove All button
         
         remove_all = Button(root, text="Remove all", command=remove_all)
         remove_all.grid(row=8, column=2 )
@@ -118,6 +116,7 @@ def window_1():
         my_tree = ttk.Treeview(root)
         my_tree['columns'] = ("Row_#", "Your_Name", "Reciept_Number", "Item_Number_Hired", "Item_Hired")
         
+        # Treeview Column
         my_tree.column("#0", width=0, stretch=NO)  # Hide the default first column
         my_tree.column("Row_#", anchor=CENTER, width=80)
         my_tree.column("Your_Name", anchor=W, width=140)
@@ -125,6 +124,7 @@ def window_1():
         my_tree.column("Item_Number_Hired", anchor=CENTER, width=150)
         my_tree.column("Item_Hired", anchor=W, width=200)
 
+        #Treeview Headers
         my_tree.heading("#0", text="", anchor=CENTER)  # Hide the default first column
         my_tree.heading("Row_#", text="Row No.", anchor=CENTER)
         my_tree.heading("Your_Name", text="Customer Name", anchor=CENTER)
