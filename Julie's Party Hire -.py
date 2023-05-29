@@ -76,6 +76,7 @@ def window_1():
         save = Button(root, text="Save Changes", command=save_changes)
         save.grid(row=8, column=0, pady=20)
         
+
         #Def remove
         def remove_all():
             for changes in my_tree.get_children():
@@ -83,8 +84,10 @@ def window_1():
             
     
         #Remove all
+        
         remove_all = Button(root, text="Remove all", command=remove_all)
-        remove_all.grid(row=8, column=1, pady = 20 )
+        remove_all.grid(row=8, column=2 )
+                
         # Using Treeview Widget
         my_tree = ttk.Treeview(root)
         my_tree['columns'] = ("Row_#", "Your_Name", "Reciept_Number", "Item_Number_Hired", "Item_Hired")
@@ -103,6 +106,18 @@ def window_1():
         my_tree.heading("Item_Number_Hired", text="No. of Items Hired", anchor=CENTER)
         my_tree.heading("Item_Hired", text="Item Name", anchor=CENTER)
         my_tree.grid(row=9, column=0, columnspan=100)
+        
+        #User delete individual row
+        def delete_row(event):
+            selected_item = my_tree.selection()
+            if selected_item:
+                 my_tree.delete(selected_item)
+                 
+        
+        # Bind double-click event to treeview
+        my_tree.bind("<Double-1>", delete_row)   
+        
+        
 
         # Destroy Program Function
         def close():
