@@ -145,7 +145,7 @@ def window_1():
         
         #LOGO IMAGE TOP RIGHT
         img4 = Image.open("C:\\Users\\super\\Downloads\\JULIES_HIRE_PARTY\\PROGRAM\\imagesss.png")
-        img4 = img4.resize((300, 250), Image.ANTIALIAS)
+        img4 = img4.resize((330, 250), Image.ANTIALIAS)
         photo2 = ImageTk.PhotoImage(img4)
         imagelabel2 = Label(root, image=photo2)
         image_references.append(photo2)
