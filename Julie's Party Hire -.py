@@ -101,13 +101,13 @@ def window_1():
         save.grid(row=8, column=0, pady=20)
         
 
-        # Remove all function
+        # Return all function
         def return_all():
             for changes in my_tree.get_children():
                 my_tree.delete(changes)
             
     
-        #Remove All button
+        #Return All button
         
         return_all = Button(root, text="Return all", command=return_all)
         return_all.grid(row=8, column=2 )
