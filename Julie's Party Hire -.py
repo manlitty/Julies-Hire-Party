@@ -102,15 +102,15 @@ def window_1():
         
 
         # Remove all function
-        def remove_all():
+        def return_all():
             for changes in my_tree.get_children():
                 my_tree.delete(changes)
             
     
         #Remove All button
         
-        remove_all = Button(root, text="Remove all", command=remove_all)
-        remove_all.grid(row=8, column=2 )
+        return_all = Button(root, text="Return all", command=return_all)
+        return_all.grid(row=8, column=2 )
                 
         # Using Treeview Widget
         my_tree = ttk.Treeview(root)
