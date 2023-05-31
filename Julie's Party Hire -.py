@@ -8,7 +8,7 @@ import re
 root = Tk()
 root.title("Julie's Hire Party") # Title
 root.iconbitmap('C:\\Users\\super\\Downloads\\hireparty.ico') # Icon top left of the program
-root.minsize(height=450, width=440) # Size of Program
+root.minsize(height=450, width=380) # Size of Program
 
 image_references = [] # frame and images
 count = 0 # used to add rows
@@ -45,15 +45,16 @@ def window_1():
             return not any(char.isdigit() or char == '.' for char in text)
         
         # Entry Widgets + Buttons
+        # Entry Widgets + Buttons
         L1 = Label(text="What's Your Name?:", font=40)
-        L1.grid(row=0, column=0, sticky="w")
+        L1.grid(row=0, column=0, sticky="w", pady=(10, 0))  # Increased top padding
 
         E1 = Entry(root, bg="#f4f3f8", validate="key")
         E1.configure(validatecommand=(root.register(validate_input), '%P'))
         E1.grid(row=1, column=0, padx=(0, 45), sticky="w")
 
         L2 = Label(text="Your Receipt Number:", font=10)
-        L2.grid(row=2, column=0, padx=(0, 30), sticky="w")
+        L2.grid(row=2, column=0, padx=(0, 30), sticky="w", pady=(10, 0))  # Increased top padding
 
         E2 = Entry(root, bg="#f4f3f8")
         E2.grid(row=3, column=0, padx=(0, 45), sticky="w")
@@ -61,19 +62,20 @@ def window_1():
         E2['validate'] = 'key'
 
         L3 = Label(text="Name of Items Hired:", font=40)
-        L3.grid(row=4, column=0, padx=(0, 50), sticky="w")
+        L3.grid(row=4, column=0, padx=(0, 50), sticky="w", pady=(10, 0))  # Increased top padding
 
         E3 = Entry(root, bg="#f4f3f8", validate="key")
         E3.configure(validatecommand=(root.register(validate_input), '%P'))
         E3.grid(row=5, column=0, padx=(0, 45), sticky="w")
 
         L4 = Label(text="Number of Items Hired:", font=20)
-        L4.grid(row=6, column=0, padx=(0, 50), sticky="w")
+        L4.grid(row=6, column=0, padx=(0, 50), sticky="w", pady=(10, 0))  # Increased top padding
 
         E4 = Entry(root, bg="#f4f3f8")
         E4.grid(row=7, column=0, padx=(0, 45), sticky="w")
         E4['validatecommand'] = (root.register(validate_entry), '%P')
         E4['validate'] = 'key'
+
         
 
         # Save Changes
@@ -98,21 +100,19 @@ def window_1():
 
         # Save button
         save = Button(root, text="Save Changes", command=save_changes)
-        save.grid(row=8, column=0, pady=20)
-        
+        save.grid(row=8, column=0, pady=(20,0), sticky="w") 
 
         # Return all function
         def return_all():
             for changes in my_tree.get_children():
                 my_tree.delete(changes)
             
-    
         #Return All button
         
         return_all = Button(root, text="Return all", command=return_all)
-        return_all.grid(row=8, column=2 )
+        return_all.grid(row=8, column=0, pady=(20,0), padx=(85,0), sticky="w" )
                 
-        # Using Treeview Widget
+        # Using Treeview Widget 
         my_tree = ttk.Treeview(root)
         my_tree['columns'] = ("Row_#", "Your_Name", "Reciept_Number", "Item_Number_Hired", "Item_Hired")
         
@@ -149,7 +149,7 @@ def window_1():
         photo2 = ImageTk.PhotoImage(img4)
         imagelabel2 = Label(root, image=photo2)
         image_references.append(photo2)
-        imagelabel2.place(x=380, y=0)  # Position the photo in the top-right corner
+        imagelabel2.place(x=350, y=0)  # Position the photo in the top-right corner
         
 
         # Destroy Program Function
@@ -157,14 +157,14 @@ def window_1():
             root.destroy()
 
         button2 = Button(root, text='Exit', font=('Catamaran', 15), command=close)
-        button2.grid(row=10, column=0, sticky="se")
+        button2.grid(row=10, column=0, sticky="sw")
 
     # Window_1 Labels, Buttons etc.
     label1 = Label(root, text="Welcome to...", font=("Century Gothic", 25))
     label1.grid(row=0, column=0)
 
     button1 = Button(root, text='Proceed', font=('Catamaran', 15), command=window_2, activebackground='blue')
-    button1.grid(row=1, column=0, pady=20)
+    button1.grid(row=5, column=0, pady=20, sticky="e")
 
     # Images - Window 1
     img = Image.open("C:\\Users\\super\\Downloads\\JULIES_HIRE_PARTY\\PROGRAM\\imagesss.png")
