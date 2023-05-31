@@ -78,7 +78,7 @@ def window_1():
         
 
         # Save Changes
-        def save_changes():
+        def save_changes(event):
             global count
             name = E1.get()
             receipt_number = E2.get()
