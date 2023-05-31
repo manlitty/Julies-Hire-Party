@@ -47,14 +47,13 @@ def window_1():
 
         # Entry Widgets + Buttons
         L1 = Label(text="What's Your Name?:", font=40)
-        L1.grid(row=0, column=0, sticky="w", pady=(10, 0))  # Increased top padding
-
+        L1.grid(row=0, column=0, sticky="w", pady=(10, 0))  
         E1 = Entry(root, bg="#f4f3f8", validate="key")
         E1.configure(validatecommand=(root.register(validate_input), '%P'))
         E1.grid(row=1, column=0, padx=(0, 45), sticky="w")
 
         L2 = Label(text="Your Receipt Number:", font=10)
-        L2.grid(row=2, column=0, padx=(0, 30), sticky="w", pady=(10, 0))  # Increased top padding
+        L2.grid(row=2, column=0, padx=(0, 30), sticky="w", pady=(10, 0))  
 
         E2 = Entry(root, bg="#f4f3f8")
         E2.grid(row=3, column=0, padx=(0, 45), sticky="w")
@@ -62,14 +61,14 @@ def window_1():
         E2['validate'] = 'key'
 
         L3 = Label(text="Name of Items Hired:", font=40)
-        L3.grid(row=4, column=0, padx=(0, 50), sticky="w", pady=(10, 0))  # Increased top padding
+        L3.grid(row=4, column=0, padx=(0, 50), sticky="w", pady=(10, 0))  
 
         E3 = Entry(root, bg="#f4f3f8", validate="key")
         E3.configure(validatecommand=(root.register(validate_input), '%P'))
         E3.grid(row=5, column=0, padx=(0, 45), sticky="w")
 
         L4 = Label(text="Number of Items Hired:", font=20)
-        L4.grid(row=6, column=0, padx=(0, 50), sticky="w", pady=(10, 0))  # Increased top padding
+        L4.grid(row=6, column=0, padx=(0, 50), sticky="w", pady=(10, 0))
 
         E4 = Entry(root, bg="#f4f3f8")
         E4.grid(row=7, column=0, padx=(0, 45), sticky="w")
