@@ -44,8 +44,7 @@ def window_1():
         #Restricts user to type numbers from Entry 1-3
         def validate_input(text):
             return not any(char.isdigit() or char == '.' for char in text)
-        
-        # Entry Widgets + Buttons
+
         # Entry Widgets + Buttons
         L1 = Label(text="What's Your Name?:", font=40)
         L1.grid(row=0, column=0, sticky="w", pady=(10, 0))  # Increased top padding
