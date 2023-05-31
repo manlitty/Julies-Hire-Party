@@ -22,6 +22,7 @@ def window_1():
         button1.destroy()  # destroy button from window 1
         imagelabel.destroy()  # destroy image label from window 1
         frame.destroy()  # destroys framing from window 1
+        text.destroy() # destroys text credit
 
         # Delete Startup Image
         for image_ref in image_references:
@@ -133,6 +134,7 @@ def window_1():
         my_tree.heading("Item_Hired", text="Item Name", anchor=CENTER)
         my_tree.grid(row=9, column=0, columnspan=100)
         
+        
         #User delete individual row
         def delete_row(event):
             selected_item = my_tree.selection()
@@ -173,11 +175,16 @@ def window_1():
     imagelabel = Label(root, image=photo)
     image_references.append(photo)
 
+
     # Framing for Image - Window 1
     frame = Frame(root, highlightbackground='black', highlightthickness=2)
     frame.grid(row=2, column=0, pady=10)
     imagelabel2 = Label(frame, image=photo)
     imagelabel2.pack()
+    
+    #Text Credits
+    text = Label(root, text='Credits to: https://www.facebook.com/juliespartyrentals/', font=('Catamaran', 10, 'italic'))
+    text.grid(row=2, column=0, sticky='sw', padx=10, pady=20)
 
 
 window_1()
