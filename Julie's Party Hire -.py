@@ -78,24 +78,25 @@ def window_1():
         
 
         # Save Changes
-        def save_changes(event):
+        def save_changes():
             global count
             name = E1.get()
             receipt_number = E2.get()
             item_name = E3.get()
             item_quantity = E4.get()
-            
+    
             if name and receipt_number and item_name and item_quantity:
                 item_id = count + 1
                 values = (item_id, name, receipt_number, item_quantity, item_name)
                 my_tree.insert(parent='', index='end', iid=item_id, text=item_id, values=values)
                 count += 1
 
-            # Clear Logs
+    # Clear Logs
             E1.delete(0, END)
             E2.delete(0, END)
             E3.delete(0, END)
             E4.delete(0, END)
+
 
         # Save button
         save = Button(root, text="Save Changes", command=save_changes)
